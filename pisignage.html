@@ -1,0 +1,116 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pisignage-creds',{
+        category: 'config',
+        defaults: {
+            name: {value:""},
+            username: {type:"text"},
+            password: {type:"password"},
+            host: {type: "text"}
+        },
+        label: function() {
+            return this.name||"pisignage";
+        },
+        oneditprepare: function(){
+
+        },
+        oneditsave: function() {
+            
+        },
+        oneditresize: function() {
+            
+        },
+    });
+    
+</script>
+
+<script type="text/html" data-template-name="pisignage-creds">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-username"><i class="fa fa-tag"></i> Username</label>
+        <input type="text" id="node-config-input-username">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-password"><i class="fa fa-tag"></i> Password</label>
+        <input type="password" id="node-config-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-host"><i class="fa fa-tag"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('pisignage',{
+        category: 'pisignage',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            creds: {value:"", type: "pisignage-creds"}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.svg",
+        label: function() {
+            return this.name||"pisignage";
+        },
+        oneditprepare: function(){
+
+        },
+        oneditsave: function() {
+            
+        },
+        oneditresize: function() {
+            
+        }
+    });
+    
+</script>
+
+<script type="text/html" data-template-name="pisignage">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"><i class="fa fa-tag"></i> Credentials</label>
+        <input type="text" id="node-input-creds">
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('pisignage-tv-power',{
+        category: 'pisignage',
+        color: '#a6bbcf',
+        inputs: 1,
+        outputs: 1,
+        defaults: {
+            name: {value:""},
+            creds: {value:"", type: "pisignage-creds"},
+            playerName: {value:"", type: "Player Name"}
+        },
+    })
+</script>
+
+<script type="text/html" data-template-name="pisignage-tv-power">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"><i class="fa fa-tag"></i> Credentials</label>
+        <input type="text" id="node-input-creds">
+    </div>
+    <div class="form-row">
+        <label for="node-input-playerName"><i class="fa fa-tag"></i> Player Name</label>
+        <input type="text" id="node-input-playerName">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pisignage">
+    <p>A Thing</p>
+</script>
