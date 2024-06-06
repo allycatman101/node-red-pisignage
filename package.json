@@ -1,6 +1,6 @@
 {
-  "name": "pisignage",
-  "version": "0.0.1",
+  "name": "node-red-contrib-pisignage",
+  "version": "0.0.2",
   "description": "uses pisignage api to be able to controll from node-red",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "keywords": [
+    "node-red",
+    "pisignage"
+  ],
   "node-red" : {
     "nodes": {
         "pisignage": "pisignage.js"
