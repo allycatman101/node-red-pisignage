@@ -9,7 +9,7 @@
     }
     RED.nodes.registerType("lower-case",LowerCaseNode);
 }*/
-
+ 
 module.exports = function (RED) {
     function pisignageNodeCreds(config) {
         RED.nodes.createNode(this, config);
